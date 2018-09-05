@@ -9,15 +9,15 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import { createStackNavigator } from 'react-navigation';
-import LandingPage from 'DreamPrediction/src/containers/landingPage';
+import LandingPage from './src/containers/LandingPage';
 
-const RootStack = createStackNavigator({
-  LandingPage: {
-    screen: LandingPage
+const RootStack = createStackNavigator(
+  {
+    LandingPage: LandingPage
   }
-});
+);
 
-export default class App extends Component<Props> {
+export default class App extends React.Component {
   render() {
     return (
       <RootStack />
