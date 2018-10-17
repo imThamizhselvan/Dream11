@@ -3,9 +3,14 @@ import { StyleSheet } from 'react-native';
 export const colors = {
     black: '#1a1917',
     red: '#c51c22',
-    gray: '#888888',
+    gray: '#808080',
+    littleGray: '#b3b3b3',
+    lightGray: '#f2f2f2',
+    background1: '#B721FF',
+    background2: '#21D4FD',
+    white: '#ffffff',
     gradientColorFirst: '#ffffff',
-    gradientColorSecond: '#f1eeee'
+    gradientColorSecond: '#e6e6e6'
 };
 
 export default StyleSheet.create({
@@ -21,29 +26,40 @@ export default StyleSheet.create({
       flexDirection: 'row'
     },
     quarterFlex: {
-      flex: 0.25
+      flex: 0.2
     },
     halfFlex: {
-      flex: 0.5
+      flex: 0.6
     },
     containFlex: {
       resizeMode: 'contain',
-      flex: 1
+      flex: 1,
+      marginTop: 15,
+      marginRight: 5,
+      marginLeft: 5,
+    },
+    teamName: {
+      fontSize: 16,
+      textAlign: 'center',
+      paddingBottom: 15,
     },
     card: {
       height: 100,
       borderWidth: 1,
-      borderRadius: 2,
+      borderRadius: 4,
       borderColor: '#ddd',
       borderBottomWidth: 0,
-      shadowColor: '#000',
+      shadowColor: '#fff',
       shadowOffset: { width: 0, height: 1 },
       shadowOpacity: 0.8,
-      shadowRadius: 2,
+      shadowRadius: 4,
       elevation: 1,
-      marginLeft: 5,
-      marginRight: 5,
+      marginLeft: 8,
+      paddingLeft: 2,
+      paddingRight: 2,
+      marginRight: 8,
       marginTop: 10,
+      backgroundColor: '#ffffff'
     },
     gradient: {
         ...StyleSheet.absoluteFillObject
@@ -58,16 +74,26 @@ export default StyleSheet.create({
         backgroundColor: colors.red
     },
     WebViewPart: {
-        flex: 4
+        flex: 3.1,
+        backgroundColor: colors.white
     },
-    exampleContainer: {
-        paddingVertical: 10
+    SliderPart: {
+        flex: 2.83,
+        overflow: 'hidden',
+        backgroundColor: colors.white
     },
-    exampleContainerDark: {
+    TabStyle: {
         backgroundColor: colors.red
     },
-    exampleContainerLight: {
-        backgroundColor: 'white'
+    GrayColor: {
+        backgroundColor: colors.gradientColorSecond
+    },
+    ScrollNotif: {
+        backgroundColor: colors.gradientColorSecond,
+    },
+    exampleContainer: {
+        paddingVertical: 5,
+        backgroundColor: colors.gradientColorSecond
     },
     title: {
         paddingHorizontal: 30,
@@ -103,5 +129,22 @@ export default StyleSheet.create({
         height: 8,
         borderRadius: 4,
         marginHorizontal: 8
+    },
+    activeButton: {
+        backgroundColor: '#c51c22',
+        marginLeft: 5,
+        marginTop: 5,
+        marginRight: 5,
+        flex: 3
+    },
+    inActiveButton: {
+        backgroundColor: '#ffffff',
+        marginLeft: 5,
+        marginTop: 5,
+        marginRight: 5,
+        flex: 3
+    },
+    inActiveText: {
+        color: colors.red,
     }
 });
